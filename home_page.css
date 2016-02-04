@@ -31,5 +31,18 @@ font-size:30px;
 top:500px;
 left:300px;}
 
+.links2{color:#ffffff;
+font-family:Arial, sans-seriff;
+text-align:center;
+font-size:30px;
+top:530px;
+left:300px;}
 
-a{color:#ffffff;}
+
+a{color:#ffffff;
+    text-decoration:none
+}
+
+a:hover{color:#F26B46;
+    text-decoration:none
+}

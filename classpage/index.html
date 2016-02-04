@@ -1,0 +1,137 @@
+<html>
+  <head>
+  <title>Web Design 2: Development</title>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <h1><a href="/">Web Design 2</a></h1>
+    <ul>
+      <li>Fridays, 12:30&ndash;3:20 PM</li>
+      <li>Engineering Bldg., Rm. 204</li>
+      <li><a href="/pdf/web_design_2_spring_2015.pdf" target="_blank">Class Syllabus (PDF)</a></li>
+    </ul>
+    <h2>Instructor</h2>
+    <ul>
+      <li>Brendan Griffiths</li>
+      <li><a class="email-address" href="mailto:bgriffi3@pratt.edu">bgriffi3@pratt.edu</a></li>
+    </ul>
+    <h2>Lecture Notes</h2>
+    <ul>
+      <li><a href="/lecture/css-introduction/">CSS Introduction</a></li>
+      <li><a href="/lecture/getting-started/">Getting Started</a></li>
+    </ul>
+    <h2>Assignments</h2>
+    <ul>
+      <li><a href="/assignment/class-page/">Class Page</a></li>
+      <li><a href="/assignment/hello-world/">Hello World!</a></li>
+      <li><a href="/assignment/homepage/">Homepage</a></li>
+    </ul>
+    <h2>Appendix</h2>
+    <ul>
+      <li><a href="/readings/">Readings</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/students/">Students</a></li>
+    </ul>
+    <p>
+      <small>Last updated: January 30, 2015</small>
+    </p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="posts">
+    <div class="post">
+      
+    
+        
+      <h1 class="post-title">
+      CSS Introduction </h1>
+      <span class="post-date">January 30, 2015</span>
+      <h2>Cascading Style Sheets</h2>
+      <p>
+        HTML stands for Hyper Text Markup Language. Markup is the key word in HTML, because HTML describes the content of the page.
+      </p>
+      <p>
+        CSS stands for Cascading Style Sheets. Here, Style is the key word. CSS styles the page’s contents.
+      </p>
+      <p>
+        CSS files end with the extension .css and are linked to your HTML page using the <code>&lt;link&gt;</code> tag:
+      </p>
+      <p>
+        <code>&lt;link href=&quot;assets/css/style.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</code>
+      </p>
+      <p>
+        The <code>&lt;link&gt;</code> tag should always live inside the of your HTML document, as seen here:
+      </p>
+      <div class="highlight">
+        <pre>
+          <code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
+          <span class="nt">&lt;head&gt;</span>
+          <span class="nt">&lt;title&gt;</span>Core Interaction<span class="nt">&lt;/title&gt;</span>
+          <span class="nt">&lt;link</span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="na">href=</span><span class="s">&quot;assets/css/global.css&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/head&gt;</span>
+          <span class="nt">&lt;body&gt;</span>
+          <span class="nt">&lt;/body&gt;</span>
+          <span class="nt">&lt;/html&gt;</span></code>
+        </pre>
+      </div>
+      <h2>CSS Syntax</h2>
+      <p>
+        CSS syntax has three main components: selectors, properties, and values. Selectors can be any HTML element, for example: p, a, hr, strong, and h1 are all selectors. For each selector, you can specify properties, such ascolor, font-family, font-size, etc. Each property is given a value, such as blue, Arial, 17px, etc. In the example below, p is our selector, color, font-family, and font-size are the properties, and blue, Arial, and 17px, are the values.
+      </p>
+      <div class="highlight">
+        <pre>
+          <code class="language-css" data-lang="css"><span class="nt">p</span><span class="p">{</span>
+          <span class="k">color</span><span class="o">:</span><span class="nb">blue</span><span class="p">;</span>
+          <span class="k">font-family</span><span class="o">:</span><span class="n">Arial</span><span class="o">,</span><span class="k">sans-serif</span><span class="p">;</span>
+          <span class="k">font-size</span><span class="o">:</span><span class="m">17px</span><span class="p">;</span>
+          <span class="p">}</span></code>
+        </pre>
+      </div>
+      <p>
+        Keep in mind, if this CSS file were attached to this page, it would apply the above styling to every paragraph within the document. CSS, like HTML, can contain comments. To open a comment, type <code>/*</code>. To close, type <code>*/</code>.
+      </p>
+      <h2>Classes and IDs</h2>
+      <p>
+        You can also define your own selectors using classes and IDs. Classes and IDs are HTML attributes, like <code>src</code> or <code>href</code>. The big difference between classes and IDs is that classes are repeatable, whereas IDs can be used only once. You can attach a class or an ID to any HTML element like this:
+      </p>
+      <div class="highlight">
+        <pre>
+          <code class="language-html" data-lang="html"><span class="nt">&lt;p</span><span class="na">id=</span><span class="s">&quot;intro&quot;</span><span class="nt">&gt;</span>Hi, I&#39;m an introduction!<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p</span><span class="na">class=</span><span class="s">&quot;normal&quot;</span><span class="nt">&gt;</span>I&#39;m a &#39;normal&#39; block of text.<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;p</span><span class="na">class=</span><span class="s">&quot;indent&quot;</span><span class="nt">&gt;</span>I&#39;m a special block of text.<span class="nt">&lt;/p&gt;</span></code>
+        </pre>
+      </div>
+      <p>
+        To reference an ID in your CSS document, you must use a hash tag as a prefix (ie: #intro). To reference a class, use a period as a prefix (ie: .normal).Now I can use the selector #intro to control the appearance of the first paragraph, the selector .normal to control the second, and the selector .indent to control the third. For example:
+      </p>
+      <div class="highlight">
+        <pre>
+          <code class="language-css" data-lang="css"><span class="nf">#intro</span><span class="p">{</span>
+          <span class="k">color</span><span class="o">:</span><span class="m">#FF0000</span><span class="p">;</span>
+          <span class="k">font-family</span><span class="o">:</span><span class="s2">&quot;Times New Roman&quot;</span><span class="o">,</span><span class="k">serif</span><span class="p">;</span>
+          <span class="k">font-size</span><span class="o">:</span><span class="m">48px</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="nc">.normal</span><span class="p">{</span>
+          <span class="k">color</span><span class="o">:</span><span class="m">#999999</span><span class="p">;</span>
+          <span class="k">font-family</span><span class="o">:</span><span class="n">Arial</span><span class="o">,</span><span class="k">sans-serif</span><span class="p">;</span>
+          <span class="k">font-size</span><span class="o">:</span><span class="m">15px</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="nc">.indent</span><span class="p">{</span>
+          <span class="k">color</span><span class="o">:</span><span class="nb">purple</span><span class="p">;</span>
+          <span class="k">font-family</span><span class="o">:</span><span class="n">Arial</span><span class="o">,</span><span class="k">sans-serif</span><span class="p">;</span>
+          <span class="k">font-weight</span><span class="o">:</span><span class="k">bold</span><span class="p">;</span>
+          <span class="k">font-size</span><span class="o">:</span><span class="m">18px</span><span class="p">;</span>
+          <span class="k">padding-left</span><span class="o">:</span><span class="m">40px</span><span class="p">;</span>
+          <span class="p">}</span></code>
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
