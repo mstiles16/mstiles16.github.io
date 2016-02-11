@@ -1,5 +1,5 @@
 .sidebar{font-family:Arial, sans-seriff;
-    background-color:#3ACDDD;
+    background-color:#009688;
     width:250px;
     height:100%;
     border-radius:0%;
@@ -9,19 +9,27 @@
     font-size:25px;
     float:left;
     position:fixed;
+    color:#ffffff;
+  
   
 }
 
 
 .posts{float:right;
-    margin-right:400px;
+    margin-right:200px;
+    background-color:#CDDC39;
+    border-radius:5%;
+    padding-top:20px;
+    padding-right:60px;
+    padding-left:60px;
+    padding-bottom:20px;
 }
 
 
 
 
-body{margin:5px;
-    background-color:#95EFF9;
+body{margin:0px;
+    background-color:#B2DFDB;
 }
 
 
@@ -30,20 +38,22 @@ li{font-size:15px;
 
 
 
-a {color:#307C84;
+a {color:#CDDC39;
 text-decoration:none;}
 
 
-a:hover{color:#F3F975;
+a:hover{color:#307C84;
 text-decoration:none;
 }
 
 
 h1{color:#307C84;
     font-family:Arial, sans-seriff;
+ 
+
 }
 
-h2{color:#ffffff;
+h2{;
     font-size:18px;
     font-family:Arial, sans-seriff;
 }
@@ -51,17 +61,25 @@ h2{color:#ffffff;
 small{font-size:12px;}
 
 
+.post-date{font-family:Arial, sans-seriff;
+color:#307C84;;
+font-size:12px;}
+
+
 
 
 .highlight{background-color:#EFEFEF;
     width:600px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius:10%;
 }
 
 p{font-family:Arial, sans-seriff;
 color:#231F20;
 width:600px;
-
 }
+
 
 
 
