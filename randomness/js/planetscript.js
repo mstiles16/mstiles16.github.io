@@ -1,4 +1,3 @@
-var images = ["Earth.png", "Jupiter.png", "Mars.png", "Mercury.png", "Neptune.png", "Pluto.png", "Saturn.png", "Uranus.png", "Venus.png", "Rocket.png"];
 var colors = ["#F25536", "#44AFCC", "#E83DE4", "#88EDA2", "#E7FF57"];
 
 var currentcolor = null;
@@ -24,6 +23,17 @@ $(".button").click(function() {
         $(this).css("left", randleft);
   
     });
+    
+    var earthrandtop = Math.floor(Math.random() * 1000) + "px";
+    var earthrandleft = Math.floor(Math.random() * 1000) + "px";
+        $(".earth").css("opacity",1);
+        $(".earth").css("top", earthrandtop);
+        $(".earth").css("left", earthrandleft);
+        
+        console.log(earthrandtop);
+        console.log(earthrandleft);
+        
+        
     $(this).css("margin-top","40px");
 });
 
